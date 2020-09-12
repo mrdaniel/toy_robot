@@ -7,14 +7,14 @@ RSpec.describe Board do
   end
 
   it "#placement_valid? returns true when valid" do
-    placement = Placement.new(x: 0, y: 2)
+    placement = Placement.new(x: 0, y: 2, direction: "NORTH")
     board = Board.new
 
     expect(board.placement_valid?(placement)).to be true
   end
 
   it "#placement_valid? returns false when invalid" do
-    placement = Placement.new(x: 0, y: -2)
+    placement = Placement.new(x: 0, y: -2, direction: "NORTH")
     board = Board.new
 
     expect(board.placement_valid?(placement)).to be false
