@@ -1,4 +1,4 @@
-Dir[File.join(__dir__, "..", "lib", "toy_robot", "*.rb")].each { |file| require file }
+Dir[File.join(__dir__, "..", "lib", "robot_game", "*.rb")].each { |file| require file }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

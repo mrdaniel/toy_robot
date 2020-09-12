@@ -1,6 +1,4 @@
-require "toy_robot/version"
-
-module ToyRobot
+module RobotGame
   class Error < StandardError; end
   # Your code goes here...
 end
