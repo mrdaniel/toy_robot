@@ -13,10 +13,6 @@ class ToyRobot
     self.placement = placement
   end
 
-  def new_placement(args)
-    Placement.new(x: args[0], y: args[1], direction: args[2])
-  end
-
   def next_placement
     Placement.dup_and_move(@placement) if placed?
   end
