@@ -43,7 +43,7 @@ class Game
     if load_instructions
       load_instructions.gsub("%{board_size}", @board.to_s)
     else
-      instruction_error_message
+      instructions_error_message
     end
   end
 
@@ -63,11 +63,11 @@ class Game
       file = File.join(root_dir, "instructions.yml")
       YAML.load_file(file)["instructions"]
     rescue Errno::ENOENT
-      instruction_error_message
+      instructions_error_message
     end
   end
 
-  def instruction_error_message
+  def instructions_error_message
     "Woops! We couldn't load the instructions. Type 'exit' to exit the game."
   end
 end
