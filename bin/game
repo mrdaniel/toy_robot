@@ -1,3 +1,6 @@
 #!/usr/bin/env ruby
 
-# TO DO
+ROOT_DIR = File.expand_path('..', __dir__)
+Dir.glob("#{ROOT_DIR}/lib/**/*.rb").each { |file| require(file) }
+
+RobotGame.start_game

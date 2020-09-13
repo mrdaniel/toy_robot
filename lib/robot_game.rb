@@ -1,4 +1,8 @@
 module RobotGame
-  class Error < StandardError; end
-  # Your code goes here...
+  extend self
+
+  def start_game
+    game = Game.new
+    puts game.instructions
+  end
 end

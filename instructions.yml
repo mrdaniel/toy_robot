@@ -1,0 +1,17 @@
+instructions: |
+  -------------------------------------------------------
+  Initialising %{board_size}...
+
+  Welcome to the Toy Robot game!
+
+  To start the game use the command 'PLACE x,y,direction'
+
+  Other available commands:
+  - MOVE
+  - RIGHT
+  - LEFT
+  - REPORT
+
+  To exit the game use the command 'exit'
+  -------------------------------------------------------
+  
