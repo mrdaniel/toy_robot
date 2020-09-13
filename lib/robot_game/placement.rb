@@ -17,15 +17,6 @@ class Placement
     Placement.new(x: x, y: y, direction: direction) if args_valid?(x, y, direction)
   end
 
-  def self.dup_and_move(placement)
-    new_placement = placement.dup
-    coordinates = Direction.to_coordinates(new_placement.direction)
-    new_placement.x += coordinates.x
-    new_placement.y += coordinates.y
-
-    new_placement
-  end
-
   def turn_right!
     self.direction = Direction.next_to_right(@direction)
   end

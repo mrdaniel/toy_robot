@@ -14,7 +14,11 @@ class ToyRobot
   end
 
   def next_placement
-    Placement.dup_and_move(@placement) if placed?
+    coordinates = Direction.to_coordinates(@placement.direction)
+    x = @placement.x + coordinates.x
+    y = @placement.y + coordinates.y
+
+    Placement.new(x: x, y: y, direction: @placement.direction)
   end
 
   def turn_right!

@@ -25,14 +25,11 @@ RSpec.describe ToyRobot do
     expect(@robot.report).to be nil
   end
 
-  it "#next_placement returns a new placement object if robot placed" do
+  it "#next_placement returns a new placement object" do
     @robot.set_placement!(placement)
+    new_placement = @robot.next_placement
 
-    expect(@robot.next_placement.is_a?(Placement)).to be true
-  end
-
-  it "#next_placement returns nil if robot not placed" do
-    expect(@robot.next_placement).to be nil
+    expect(new_placement.is_a?(Placement)).to be true
   end
 
   it "#turn_right! updates direction if robot placed" do

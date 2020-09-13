@@ -19,13 +19,6 @@ RSpec.describe Placement do
     expect(@placement.to_s).to eq "3,4,NORTH"
   end
 
-  it "#dup_and_move returns new object and moves it in a direction" do
-    new_placement = Placement.dup_and_move(@placement)
-
-    expect(@placement.object_id).not_to eq new_placement.object_id
-    expect(new_placement.to_s).to eq "3,5,NORTH"
-  end
-
   it "#turn_right! rotates and updates direction" do
     @placement.turn_right!
 
