@@ -16,4 +16,8 @@ class ToyRobot
   def report
     @placement.to_s if placed?
   end
+
+  def move
+    Placement.dup_and_move(@placement) if placed?
+  end
 end
