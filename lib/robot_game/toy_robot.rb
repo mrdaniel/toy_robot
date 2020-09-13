@@ -13,8 +13,8 @@ class ToyRobot
     self.placement = placement
   end
 
-  def report
-    @placement.to_s if placed?
+  def new_placement(args)
+    Placement.new(x: args[0], y: args[1], direction: args[2])
   end
 
   def next_placement
@@ -27,5 +27,9 @@ class ToyRobot
 
   def turn_left!
     @placement.turn_left! if placed?
+  end
+
+  def report
+    @placement.to_s if placed?
   end
 end
