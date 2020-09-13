@@ -11,6 +11,10 @@ module Direction
 
   DIRECTIONS = COORDINATES.keys
 
+  def valid?(direction)
+    DIRECTIONS.include?(direction)
+  end
+
   def to_coordinates(direction)
     COORDINATES[direction]
   end

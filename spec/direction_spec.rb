@@ -1,4 +1,12 @@
 RSpec.describe Direction do
+  it ".valid? return true when direction valid" do
+    expect(Direction.valid?(:north)).to be true
+  end
+
+  it ".valid? return false when direction invalid" do
+    expect(Direction.valid?(:up)).to be false
+  end
+
   it ".to_coordinates increments y by 1 when facing NORTH" do
     coordinates = Direction.to_coordinates(:north)
 

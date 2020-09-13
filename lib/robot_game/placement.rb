@@ -11,6 +11,12 @@ class Placement
     "#{@x},#{@y},#{@direction.to_s.upcase}"
   end
 
+  def self.try_create(args)
+    x, y, direction = args
+
+    Placement.new(x: x, y: y, direction: direction) if args_valid?(x, y, direction)
+  end
+
   def self.dup_and_move(placement)
     new_placement = placement.dup
     coordinates = Direction.to_coordinates(new_placement.direction)
@@ -26,5 +32,11 @@ class Placement
 
   def turn_left!
     self.direction = Direction.next_to_left(@direction)
+  end
+
+  private
+
+  def self.args_valid?(x, y, direction)
+    x.is_a?(Integer) && y.is_a?(Integer) && Direction.valid?(direction)
   end
 end
