@@ -12,4 +12,8 @@ class ToyRobot
   def set_placement!(placement)
     self.placement = placement
   end
+
+  def report
+    @placement.to_s if placed?
+  end
 end
