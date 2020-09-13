@@ -1,6 +1,5 @@
 class Placement
-  attr_accessor :x, :y
-  attr_reader :direction
+  attr_accessor :x, :y, :direction
 
   def initialize(x:, y:, direction:)
     @x = x
@@ -19,5 +18,13 @@ class Placement
     new_placement.y += coordinates.y
 
     new_placement
+  end
+
+  def turn_right!
+    self.direction = Direction.next_to_right(@direction)
+  end
+
+  def turn_left!
+    self.direction = Direction.next_to_left(@direction)
   end
 end
