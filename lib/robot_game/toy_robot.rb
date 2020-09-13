@@ -1,12 +1,8 @@
 class ToyRobot
   attr_writer :placement
 
-  def initialize
-    @placement = nil
-  end
-
-  def placed?
-    !@placement.nil?
+  def initialize(placement)
+    @placement = placement
   end
 
   def set_placement!(placement)
@@ -22,14 +18,14 @@ class ToyRobot
   end
 
   def turn_right!
-    @placement.turn_right! if placed?
+    @placement.turn_right!
   end
 
   def turn_left!
-    @placement.turn_left! if placed?
+    @placement.turn_left!
   end
 
   def report
-    @placement.to_s if placed?
+    @placement.to_s
   end
 end
