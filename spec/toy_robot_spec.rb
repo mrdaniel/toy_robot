@@ -34,4 +34,17 @@ RSpec.describe ToyRobot do
   it "#move returns nil if robot not placed" do
     expect(@robot.move).to be nil
   end
+
+  it "#turn_right! updates direction if robot placed" do
+    @robot.set_placement!(placement)
+    @robot.turn_right!
+
+    expect(@robot.report).to eq "2,0,EAST"
+  end
+
+  it "#turn_right! returns nil if robot not placed" do
+    @robot.turn_right!
+
+    expect(@robot.report).to be nil
+  end
 end

@@ -20,4 +20,12 @@ class ToyRobot
   def move
     Placement.dup_and_move(@placement) if placed?
   end
+
+  def turn_right!
+    @placement.turn_right! if placed?
+  end
+
+  def turn_left!
+    @placement.turn_left! if placed?
+  end
 end
