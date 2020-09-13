@@ -1,5 +1,5 @@
 RSpec.describe ToyRobot do
-  let(:placement) { Placement.new(x: 2, y: 0, direction: "NORTH") }
+  let(:placement) { Placement.new(x: 2, y: 0, direction: :north) }
 
   before(:each) do
     @robot = ToyRobot.new

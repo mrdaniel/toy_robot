@@ -7,14 +7,14 @@ RSpec.describe Board do
   end
 
   it "#coordinates_valid? returns true when valid" do
-    placement = Placement.new(x: 0, y: 2, direction: "NORTH")
+    placement = Placement.new(x: 0, y: 2, direction: :north)
     board = Board.new
 
     expect(board.coordinates_valid?(placement)).to be true
   end
 
   it "#coordinates_valid? returns false when invalid" do
-    placement = Placement.new(x: 0, y: -2, direction: "NORTH")
+    placement = Placement.new(x: 0, y: -2, direction: :north)
     board = Board.new
 
     expect(board.coordinates_valid?(placement)).to be false

@@ -1,6 +1,6 @@
 RSpec.describe Placement do
   before(:each) do
-    @placement = Placement.new(x: 3, y: 4, direction: "NORTH")
+    @placement = Placement.new(x: 3, y: 4, direction: :north)
   end
 
   it "#to_s formats placement attributes" do
@@ -17,12 +17,12 @@ RSpec.describe Placement do
   it "#turn_right! rotates and updates direction" do
     @placement.turn_right!
 
-    expect(@placement.direction).to eq "EAST"
+    expect(@placement.direction).to eq :east
   end
 
   it "#turn_left! rotates and updates direction" do
     @placement.turn_left!
 
-    expect(@placement.direction).to eq "WEST"
+    expect(@placement.direction).to eq :west
   end
 end

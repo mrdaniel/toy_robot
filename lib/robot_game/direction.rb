@@ -3,10 +3,10 @@ module Direction
   require "ostruct"
 
   COORDINATES = {
-    "NORTH" => OpenStruct.new(x: 0, y: 1),
-    "EAST"  => OpenStruct.new(x: 1, y: 0),
-    "SOUTH" => OpenStruct.new(x: 0, y: -1),
-    "WEST"  => OpenStruct.new(x: -1, y: 0)
+    north: OpenStruct.new(x: 0, y: 1),
+    east:  OpenStruct.new(x: 1, y: 0),
+    south: OpenStruct.new(x: 0, y: -1),
+    west:  OpenStruct.new(x: -1, y: 0)
   }
 
   DIRECTIONS = COORDINATES.keys

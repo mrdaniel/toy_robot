@@ -8,7 +8,7 @@ class Placement
   end
 
   def to_s
-    "#{@x},#{@y},#{@direction}"
+    "#{@x},#{@y},#{@direction.to_s.upcase}"
   end
 
   def self.dup_and_move(placement)
