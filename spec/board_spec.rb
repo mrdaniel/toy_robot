@@ -6,17 +6,17 @@ RSpec.describe Board do
     expect(board.height).to eq 0..4
   end
 
-  it "#placement_valid? returns true when valid" do
+  it "#coordinates_valid? returns true when valid" do
     placement = Placement.new(x: 0, y: 2, direction: "NORTH")
     board = Board.new
 
-    expect(board.placement_valid?(placement)).to be true
+    expect(board.coordinates_valid?(placement)).to be true
   end
 
-  it "#placement_valid? returns false when invalid" do
+  it "#coordinates_valid? returns false when invalid" do
     placement = Placement.new(x: 0, y: -2, direction: "NORTH")
     board = Board.new
 
-    expect(board.placement_valid?(placement)).to be false
+    expect(board.coordinates_valid?(placement)).to be false
   end
 end

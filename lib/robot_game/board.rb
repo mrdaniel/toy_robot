@@ -6,7 +6,7 @@ class Board
     @height = 0..4
   end
 
-  def placement_valid?(placement)
+  def coordinates_valid?(placement)
     @width.include?(placement.x) && @height.include?(placement.y)
   end
 end
